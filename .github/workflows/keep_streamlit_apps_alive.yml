@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Send request to Quantum Tech Papers app
+      - name: Send request to Testbed testing app
         run: curl -s -o /dev/null -w "%{http_code}\n" https://testbed-automation2.streamlit.app/
+
+      - name: Send request to Testbed app
+        run: curl -s -o /dev/null -w "%{http_code}\n" https://testbed-automation.streamlit.app/
 
